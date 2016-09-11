@@ -21,16 +21,15 @@ define([
 
         initialize: function(options){
             this.listenTo(this.collection, 'add', this.render);
-            this.listenTo(this.collection, 'remove', this.render);
         },
         render: function() {
             var self = this;
 
             this.$el.empty();
             this.collection.each(function(tweet, i) {
+
             var view = new TweetView({
-            	 model: tweet,
-            	 collection: self.collection
+            	 model: tweet
             });
                 self.$el.append(view.render().$el);
             });

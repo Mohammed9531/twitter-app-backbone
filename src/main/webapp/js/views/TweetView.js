@@ -10,12 +10,13 @@ define([
         'underscore',
         'backbone',
         'models/TweetModel',
+        'collections/TweetsCollection',
         'domReady'
-        ], function ($, _, Backbone, Tweet) {
+        ], function ($, _, Backbone, TweetModel, TweetsCollection) {
 
     //Backbone view initialization
     var TweetView = Backbone.View.extend({
-        model: Tweet,
+        model: TweetModel,
         tagName: 'section',
         className: 'tweet-view',
         template: _.template( $('#tweetsTemplate').html() ),
@@ -37,7 +38,8 @@ define([
             return this;
         },
         onDelete: function() {
-	       this.options.collection.remove(this.model);
+        	this.remove();
+        	this.model.trigger('delete', this.model);
         },
         onEdit: function() {
           this.$el.find('#' + this.model.get('id'));

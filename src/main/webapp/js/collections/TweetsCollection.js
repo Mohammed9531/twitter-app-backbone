@@ -19,15 +19,7 @@ define([
     var TweetsList = Backbone.Collection.extend({
         model: Tweet,
         initialize: function(options) {
-           this.bind('remove', this.onDelete, this);
-        },
-        onDelete: function(model, collection, options) {
-           var arr = [model, collection, options];
-
-           // test code
-           _.each(arr, function(i) {
-        	   //console.log(i + "" + "=" + arr[i]);
-           });
+            this.on('delete', this.remove);
         }
     });
 
