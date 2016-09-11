@@ -8,11 +8,11 @@
 require.config({
 
     paths: {
-        jquery      : "libs/jquery",
-        bootstrap   : "libs/bootstrap",
-        underscore  : "libs/underscore",
-        backbone    : "libs/backbone",
-        domReady    : "libs/ready",
+        jquery      : "../bower_components/jquery/dist/jquery.min",
+        bootstrap   : "../bower_components/bootstrap/dist/js/bootstrap.min",
+        underscore  : "../bower_components/underscore/underscore-min",
+        backbone    : "../bower_components/backbone/backbone-min",
+        domReady    : "../bower_components/domready/ready.min",
     },
 
     shim: {
