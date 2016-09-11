@@ -24,8 +24,9 @@ define([
         onDelete: function(model, collection, options) {
            var arr = [model, collection, options];
 
+           // test code
            _.each(arr, function(i) {
-        	   console.log(i + "" + "=" + arr[i]);
+        	   //console.log(i + "" + "=" + arr[i]);
            });
         }
     });

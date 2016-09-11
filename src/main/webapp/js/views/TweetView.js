@@ -37,7 +37,7 @@ define([
             return this;
         },
         onDelete: function() {
-	         //this.options.collection.remove(this.model);
+	       this.options.collection.remove(this.model);
         },
         onEdit: function() {
           this.$el.find('#' + this.model.get('id'));
