@@ -10,7 +10,7 @@ define([
         'underscore',
         'backbone',
         'models/TweetModel',
-        'views/AllTweetsView',
+        'views/TweetsView',
         'collections/TweetsCollection',
         'domReady'
         ], function ($, _, Backbone, TweetModel, TweetsView, TweetsCollection) {

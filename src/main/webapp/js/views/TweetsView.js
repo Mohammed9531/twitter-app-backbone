@@ -31,7 +31,7 @@ define([
             var view = new TweetView({
             	 model: tweet
             });
-                self.$el.append(view.render().$el);
+                self.$el.append(view.render().el);
             });
             return this;
         }
