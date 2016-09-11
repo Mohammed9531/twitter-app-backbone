@@ -1,0 +1,70 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	padding-top: 35px;
+}
+
+textarea {
+	resize: vertical;
+}
+
+.btn, .well, .form-control {
+	border-radius: 0;
+}
+
+.btn {
+	width: 15%;
+}
+
+#status-block {
+	text-align: justify;
+	padding: 5px 25px 25px 25px;
+}
+
+.author-block {
+	padding-left: 10px;
+}
+
+.date-block {
+	padding-right: 25px;
+}
+
+
+#btn-post {
+	background-color: #19be9d;
+	border: 0;
+	margin-top: 20px;
+}
+
+#btn-post:hover {
+	border: 0;
+	background-color: #3a93cf;
+}
+
+.tweet-view {
+	position: relative;
+	min-height: 120px;
+	max-height: auto;
+	padding: 0px;
+	background: #E6EFF6;
+	margin-top: 25px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+.tweet-view:after {
+	content: '';
+	position: absolute;
+	border-style: solid;
+	border-width: 13px 23px 13px 0;
+	border-color: transparent #E6EFF6;
+	display: block;
+	width: 0;
+	z-index: 1;
+	left: -23px;
+	top: 16px;
+}

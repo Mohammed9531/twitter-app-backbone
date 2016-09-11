@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="css/libs/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="well">
+            <form id="newTweet" class="form-horizontal">
+                    <label class="control-label">Author</label>
+                        <input id="author" class="form-control" type="text" />
+                    <label class="control-label">Status</label>
+                        <textarea class="form-control" id="status" rows="5"></textarea>
+                    <button class="btn btn-primary" id="btn-post">Post</button>
+            </form>
+        </div>
+        <hr />
+        <article id="tweets-view"></article>
+    </div>
+    <script type="text/template" id="tweetsTemplate">
+	<div class="">
+		<div class="alert">
+        <a href="#" class="close" id="tweetBlock" data-dismiss="alert" aria-label="close">&times;</a>
+        <span class="author-block pull-left"><%= author %> says:</span>
+        <a href="#" class="edit-block"><i class="glypicon glyphicon-pencil"></i></a>
+		<span class="date-block pull-right"><%= date %></span>
+        </div>
+        <div id="status-block"><%= status %></div>
+	</div>
+    </script>
+
+    <script type="text/javascript" data-main="js/main.js" src="js/libs/require.js"></script>
+</body>
+</html>
