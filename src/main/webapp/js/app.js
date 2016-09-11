@@ -16,12 +16,14 @@ define([
         ], function ($, _, Backbone, TweetModel, TweetsView, TweetsCollection) {
 
     var initialize = function () {
-        var tweets = new TweetsCollection();
+    	var tweets, author, status, tweet;
+
+        tweets = new TweetsCollection();
 
         $('#newTweet').on('submit', function() {
-            var author = $('#author').val();
-            var status = $('#status').val();
-            var tweet = new TweetModel();
+            tweet = new TweetModel();
+            author = $('#author').val();
+            status = $('#status').val();
 
             if( !_.isEmpty(author) && !_.isEmpty(status)) {
                 tweet.set({
